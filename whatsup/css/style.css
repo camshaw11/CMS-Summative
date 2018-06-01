@@ -7,8 +7,21 @@ body {
 h1, h2, h3, h4, a {
   font-family: 'Jaldi', sans-serif;
   font-weight: 400;
+  text-decoration: none;
 }
 
+.blurb {
+  max-width: 104ch;
+  font-size: 18px;
+  color: #333333;
+  padding: 100px;
+}
+
+.header {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
 .title {
   font-size: 36px;
   color: white;
@@ -42,8 +55,6 @@ i {
 }
 
 .module {
-  /* Demo-Specific Styles */
-  background: #eaeaea;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,16 +73,16 @@ i {
   }
 }
 
-.module:nth-child(1) {
+.module-one, .module-phone {
 background-color: #F3DF0E;
 }
-.module:nth-child(2) {
+.module-two, .module-chat {
 background-color: #913D88;
 }
-.module:nth-child(3) {
+.module-three, .module-about {
 background-color: #89C4F4;
 }
-.module:nth-child(4) {
+.module-four, .module-stories {
 background-color: #F2784B;
 }
 
@@ -90,9 +101,10 @@ background-color: #F2784B;
 }
 
 .sidenav a {
-    padding: 60px 8px 8px 32px;
+    padding: 50px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
+    /*width: 100px;*/
     color: white;
     display: block;
     transition: 0.3s;
@@ -100,19 +112,25 @@ background-color: #F2784B;
 }
 
 .sidenav a:hover{
-    color: #f1f1f1;
+    color: #333333;
+    transform: scale(1.1);
 }
 
 .sidenav #closebtn {
-    padding-top: 20px;
-    position: absolute;
-    top: 0;
-    right: 30px;
-    font-size: 40px;
-    margin-left: 50px;
+  z-index: 100;
+  padding-top: 20px;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  font-size: 40px;
+  margin-left: 50px;
+}
+#home {
+  padding-top: 60px;
 }
 
 #hamburger {
+  z-index: 1000;
   color: white;
   font-size: 42px;
   position: absolute;
@@ -126,3 +144,34 @@ background-color: #F2784B;
       -webkit-transform: rotate(180deg); /* Safari */
     transform: rotate(180deg);
 }
+
+.grid-phone, .grid-chat, .grid-about, .grid-stories {
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 80vh 20vh;
+}
+.module-phone, .module-chat, .module-about {
+  /*height: 70vh;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Flex Fallback */
+/*  margin-left: 5px;
+  margin-right: 5px;*/
+  flex: 1 1 200px;
+  grid-column: 1 / span 2;
+}
+
+.sidebar-left {
+  background-color: #89C4F4;
+}
+.sidebar-right {
+  background-color: #54BE14;
+}
+
+
+
+
+
+
+
