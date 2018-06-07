@@ -11,6 +11,7 @@ h1, h2, h3, h4, a {
 }
 
 .blurb {
+  margin-top: 100px;
   max-width: 104ch;
   font-size: 18px;
   color: #333333;
@@ -169,9 +170,13 @@ background-color: #F2784B;
   background-color: #54BE14;
 }
 
+.module-chat .blurb {
+  color: white;
+}
 
-
-
+.module-chat .header {
+  color: white;
+}
 
 
 
